@@ -18,4 +18,61 @@ body {
 
   font-family: Helvetica, Arial, sans-serif;
   color: var(--black);
+
+  font-size: 1.5rem;
+}
+
+.en-title,
+.de-title {
+  font-size: 6rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) repeat(4, 10rem) minmax(1rem, 1fr);
+  grid-template-rows: 1fr repeat(8, minmax(min-content, 7rem)) 1fr;
+  grid-gap: 1.5rem;
+  min-height: 100vh;
+}
+
+.author {
+  grid-column: 4 / span 2;
+  grid-row: 2;
+}
+
+.en-title {
+  grid-column: 2 / span 4;
+  grid-row: 4;
+}
+
+.en-subtitle {
+  grid-column: 2 / span 2;
+  grid-row: 5;
+}
+
+.en-desc {
+  grid-column: 4 / span 2;
+  grid-row: 5;
+}
+
+.de-title {
+  grid-column: 2 / span 4;
+  grid-row: 6;
+}
+
+.de-subtitle {
+  grid-column: 2 / span 2;
+  grid-row: 7;
+}
+
+.de-desc {
+  grid-column: 4 / span 2;
+  grid-row: 7;
+}
+
+.publisher {
+  grid-column: 4;
+  grid-row: 9;
+  justify-self: start;
+  align-self: end;
 }
