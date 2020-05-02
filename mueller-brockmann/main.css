@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --black: #392D27;
+  --red: #FF1115;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--red);
+
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--black);
+}
