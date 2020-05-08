@@ -15,11 +15,7 @@ body {
   padding: 0 1rem;
 
   transition: .2s ease;
-}
-
-.grid {
-  margin: 0 auto;
-  max-width: 60rem;
+  transition-property: color, background-color;
 
   display: grid;
   grid-template-columns: repeat(3, 10vmin);
