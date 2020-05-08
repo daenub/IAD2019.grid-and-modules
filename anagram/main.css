@@ -13,6 +13,8 @@ body {
 
   font-size: 1.5rem;
   padding: 0 1rem;
+
+  transition: .2s ease;
 }
 
 .grid {
@@ -54,14 +56,6 @@ body {
 
   .b {
     order: -3;
-  }
-
-  .i {
-
-  }
-
-  .t {
-
   }
 
   .c {
