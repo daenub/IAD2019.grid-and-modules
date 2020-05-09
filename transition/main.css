@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  color: var(--black);
+
+  font-size: 1.5rem;
+  padding: 0 1rem;
+
+  transition: .2s ease;
+  transition-property: color, background-color;
+
+  display: grid;
+  grid-template-columns: 1fr 60vmin 1fr;
+  grid-gap: 1.5rem;
+  height: 100vh;
+  overflow: hidden;
+
+  justify-content: center;
+  align-content: center;
+
+  justify-items: center;
+  align-items: center;
+}
+
+.line {
+  grid-column: 2 / 3;
+  font-size: 10vmin;
+  line-height: 1;
+  opacity: 1;
+  color: black;
+  transition: .1s ease-in;
+  transition-property: opacity, text-shadow, color;
+}
+
+.line span {
+  display: inline-block;
+  transition: opacity .25s ease-in-out;
+}
+
+/* From */
+.line span:nth-child(1) {
+  transition-delay: .4s;
+}
+
+.line:hover span:nth-child(1) {
+  transition-delay: .0s;
+  opacity: 0;
+}
+
+/* the */
+.line span:nth-child(2) {
+  transition-delay: .35s;
+}
+
+.line:hover span:nth-child(2) {
+  transition-delay: .05s;
+  opacity: 0;
+}
+
+/* places */
+.line span:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.line:hover span:nth-child(3) {
+  transition-delay: .2s;
+  opacity: 0;
+}
+
+/* you've */
+.line span:nth-child(4) {
+  transition-delay: .2s;
+}
+
+.line:hover span:nth-child(4) {
+  transition-delay: .3s;
+  opacity: 0;
+}
+
+/* been */
+.line span:nth-child(5) {
+  transition-delay: .1s;
+}
+
+.line:hover span:nth-child(5) {
+  transition-delay: .4s;
+  opacity: 0;
+}
+
+/* to */
+.line span:nth-child(6) {
+  /*transform-origin: bottom right;*/
+  /*transition: .5s ease-out;*/
+}
+
+.line:hover span:nth-child(6) {
+  /*transform: rotate(-30deg);*/
+}
+
+/* rn */
+.line span:nth-child(7) {
+  transform-origin: bottom left;
+  transition: transform .4s cubic-bezier(.17,.84,.44,1);
+  transition-delay: 0s;
+}
+
+.line:hover span:nth-child(7) {
+  transform: rotate(30deg);
+  transition-delay: .5s;
+}
