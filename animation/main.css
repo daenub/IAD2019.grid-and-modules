@@ -80,21 +80,6 @@ body {
   animation-delay: -4.1s;
 }
 
-/*.trigger {
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  left: 0;
-  height: 35vh;
-  width: 100%;
-
-  transform: translateY(-50%);
-}
-
-.trigger:hover + .grid {
-  transform: rotate(45deg);
-}*/
-
 .trigger {
   position: absolute;
   width: 50vw;
