@@ -3,14 +3,77 @@
 <head>
   <meta charset="utf-8">
   <title>Exercises – Grid and modules</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      color: #FFF;
+      background-color: #000;
+      padding: 0 1rem;
+    }
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .main {
+      max-width: 36rem;
+      margin: 0 auto;
+      padding-top: 3rem;
+      border: 2px solid black;
+    }
+
+    .title {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 1.5em;
+      text-align: center;
+    }
+
+    .title__sub {
+      font-size: 0.75em;
+    }
+
+    .navigation {
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .navigation__list {
+      list-style: none;
+    }
+
+    .navigation__item {
+      margin-bottom: 1rem;
+    }
+
+  </style>
 </head>
 <body>
-  <h1>Exercises – Grid and modules</h1>
-  <ul>
-    <li><a href="./mueller-brockmann">Müller-Brockmann</a></li>
-    <li><a href="./anagram">Anagram</a></li>
-    <li><a href="./transition">Transition</a></li>
-    <li><a href="./animation">Animation</a></li>
-  </ul>
+  <main class="main">
+    <h1 class="title">Grid and modules<br><span class="title__sub">Exercises</span></h1>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a href="./mueller-brockmann">Müller-Brockmann</a></li>
+        <li class="navigation__item"><a href="./anagram">Anagram</a></li>
+        <li class="navigation__item"><a href="./transition">Transition</a></li>
+        <li class="navigation__item"><a href="./animation">Animation</a></li>
+      </ul>
+    <nav>
+  </main>
 </body>
 </html>
