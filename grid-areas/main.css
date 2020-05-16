@@ -9,23 +9,143 @@ html {
 
 body {
   font-family: 'Jost', sans-serif;
+  color: black;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   height: 100vh;
-  overflow: hidden;
 }
 
 .grid {
+  height: 100vh;
+  width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
+  grid-template-rows: 1fr repeat(3, min-content) 1fr;
   grid-gap: 1.5rem;
-  min-width: 135vmax;
-  width: 130vmax;
+  grid-template-areas: ". halleluja halleluja halleluja ."
+      ". caving caving caving ."
+      ". love love love ."
+      ". wretched wretched wretched ."
+      ". breath breath breath .";
 }
 
-.word {
+/* Medium */
+@media screen and (min-width: 40rem) {
+  body {
+    background-color: #abcdef;
+  }
 
+  .grid {
+    grid-template-areas: "caving caving . love love"
+      ". halleluja halleluja halleluja ."
+      ". halleluja halleluja halleluja ."
+      ". halleluja halleluja halleluja ."
+      "wretched wretched . breath breath";
+  }
+}
+
+/* Large */
+@media screen and (min-width: 64rem) {
+  body {
+    background-color: #fedcba;
+  }
+
+  .grid {
+    grid-template-areas: "caving . . . love"
+      ". halleluja halleluja halleluja ."
+      ". halleluja halleluja halleluja ."
+      ". halleluja halleluja halleluja ."
+      "wretched . . . breath";
+  }
+}
+
+.line {
+  text-transform: uppercase;
+  font-size: 4vmin;
+}
+
+.caving {
+  grid-area: caving;
+  align-self: start;
+}
+
+.love {
+  grid-area: love;
+  align-self: start;
+  justify-self: end;
+  text-align: right;
+}
+
+.wretched {
+  grid-area: wretched;
+}
+
+.breath {
+  grid-area: breath;
+  justify-self: end;
+  text-align: right;
+}
+
+@media screen and (min-width: 40rem) {
+  .caving {
+    align-self: start;
+  }
+
+  .love,
+  .breath {
+    text-align: right;
+  }
+
+  .wretched,
+  .breath {
+    align-self: end;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .line {
+    writing-mode: sideways-lr;
+  }
+
+  .caving {
+    align-self: start;
+  }
+
+  .love {
+    justify-self: end;
+    align-self: start;
+  }
+
+  .breath {
+    justify-self: end;
+    align-self: start;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+
+}
+
+
+.hallelujah {
+  grid-area: halleluja;
+  font-size: 10vmin;
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+@media screen and (min-width: 64rem) {
+  .hallelujah {
+    display: block;
+  }
+}
+
+.hallelujah .exclamation {
+  grid-column: -1 / -2;
 }
